@@ -1,12 +1,12 @@
 import java.util.PriorityQueue;
 import java.util.Arrays;
-import java.util.Comparator;
+//import java.util.Comparator;
 class Solution {
     public long solution(int n, int[] works) {
     
     if(Arrays.stream(works).sum() <= n) return 0;
     PriorityQueue<Integer> pq = 
-    new PriorityQueue<>(Comparator.reverseOrder());
+    new PriorityQueue<>((a,b)->b-a);
     for(int i :works) pq.add(i);//최대 20,000 2*10^4번 연산
     while(n > 0){//최대 100만번 10^6번 연산
         int oneSolve = pq.poll()-1;
