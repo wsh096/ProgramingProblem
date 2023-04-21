@@ -4,7 +4,7 @@ public class Main{
         Scanner sc = new Scanner(System.in);
         int N = sc.nextInt();
         int K = sc.nextInt();
-        sc.nextLine();
+        sc.nextLine();//개행 문자 제거.
         if(K==0)
           System.out.print(sc.nextLine());
         else{
