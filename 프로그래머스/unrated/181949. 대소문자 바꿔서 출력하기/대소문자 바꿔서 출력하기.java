@@ -8,11 +8,9 @@ public class Solution {
         a.chars()
         .map(c -> {
             if(Character.isUpperCase(c)) return Character.toLowerCase(c);
-            else if(Character.isLowerCase(c)) return Character.toUpperCase(c);
-            else return c;
+            else return Character.toUpperCase(c);
         })
         .collect(StringBuilder::new, StringBuilder::appendCodePoint, StringBuilder::append)
-        .toString()
         );
     }
 }
