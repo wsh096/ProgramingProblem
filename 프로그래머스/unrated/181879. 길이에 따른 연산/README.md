@@ -1,10 +1,10 @@
 # [unrated] 길이에 따른 연산 - 181879 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181879) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181879#qna) 
 
 ### 성능 요약
 
-메모리: 72.9 MB, 시간: 0.65 ms
+메모리: 77.6 MB, 시간: 1.39 ms
 
 ### 구분
 
