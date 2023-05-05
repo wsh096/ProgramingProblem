@@ -1,13 +1,14 @@
-import java.util.Scanner;
+import java.io.*;
 public class Main{
-    public static void main(String[] args){
-        Scanner sc = new Scanner(System.in);
+    public static void main(String[] args)throws Exception {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringBuilder sb = new StringBuilder();
+
+        String[] input = br.readLine().split(" ");
+        int M = Integer.parseInt(input[0]);
+        int N = Integer.parseInt(input[1]);
         
-        int M = sc.nextInt();
-        int N = sc.nextInt();
-        
-        boolean[] frame = new boolean[N+5];
+        boolean[] frame = new boolean[N+1];
         
         for(int i = 2; i <= N; i++){
             if(frame[i]) continue;
@@ -16,8 +17,8 @@ public class Main{
                     frame[j] = true; 
         }
         
-      System.out.println(sb.toString());
+      System.out.println(sb);
         
-        sc.close();
+        br.close();
     }
 }
