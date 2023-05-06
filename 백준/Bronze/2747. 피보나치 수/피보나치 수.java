@@ -4,15 +4,15 @@ import java.io.InputStreamReader;
 
 public class Main{
     public static void main(String[] args) throws IOException{
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        int N = Integer.parseInt(br.readLine());
-        int[] dp = new int [N+1];
-        dp[0] = 0;
-        dp[1] = 1;
+        BufferedReader B = new BufferedReader(new InputStreamReader(System.in));
+        int N = Integer.parseInt(B.readLine());
+        int[] D = new int [N+1];
+        D[0] = 0;
+        D[1] = 1;
     
-        for(int i = 2; i <= N; i++){
-            dp[i] = dp[i-2] + dp[i-1];
+        for(int I = 2; I <= N; I++){
+            D[I] = D[I-2] + D[I-1];
         }
-        System.out.println(dp[N]);
+        System.out.println(D[N]);
     }
 }
