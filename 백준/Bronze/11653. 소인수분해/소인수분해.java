@@ -10,16 +10,15 @@ public class Main {
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         
         int A = Integer.parseInt(br.readLine());
-        while(A > 1){
-            for(int i = 2; i <= A; i++){
-                if(A%i==0){
-                    bw.write(String.valueOf(i));
-                    bw.newLine();
-                    A /= i;
-                    break;
-                }
-            }
-        }
+       for(int i = 2; i <= Math.sqrt(A); i++){
+           while(A % i == 0){
+                   bw.write(String.valueOf(i));
+                   bw.newLine();
+                   A /= i;
+               }
+           }
+       
+       if(A != 1) bw.write(String.valueOf(A));
         
         bw.flush();
         bw.close();
