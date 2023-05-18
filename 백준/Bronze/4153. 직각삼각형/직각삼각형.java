@@ -1,25 +1,36 @@
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
 import java.io.IOException;
-import java.util.Arrays;
-public class Main{
-    public static void main(String[] args) throws IOException{
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        StringBuffer sb = new StringBuffer();
-        while(true){
-            String[] input = br.readLine().split(" ");
-            if(input[0].equals("0") && input[1].equals("0")&&input[2].equals("0")) break;
-            int[] nums = new int[3];
-            for(int i = 0; i < 3; i++) nums[i] = Integer.parseInt(input[i]);
-            Arrays.sort(nums);
-            int A = nums[0];
-            int B = nums[1];
-            int C = nums[2];
-            if(A*A + B*B == C*C) sb.append("right");
-            else sb.append("wrong");
-            sb.append("\n");
+
+public class Main {
+    public static void main(String[] args) throws IOException {
+        StringBuilder sb = new StringBuilder();
+        int[] arr = new int[3];
+        while (true) {
+            for (int i = 0; i < arr.length; i++)
+            {
+                arr[i] = readInt();
+                arr[i] *= arr[i];
+            }
+            if (arr[0] == 0 && arr[1] == 0 && arr[2] == 0)
+                break;
+            else if (arr[0] + arr[1] == arr[2]
+                     || arr[0] + arr[2] == arr[1]
+                     || arr[0] == arr[1] + arr[2])
+                sb.append("right\n");
+            else
+                sb.append("wrong\n");
         }
-        System.out.println(sb);
-        br.close();
+        
+        System.out.print(sb);
+    }
+    
+    static int readInt() throws IOException {
+        int n = 0;
+        while (true) {
+            int input = System.in.read();
+            if (input <= 32)
+                return n;
+            else
+                n = (n << 3) + (n << 1) + (input & 15);
+        }
     }
 }
