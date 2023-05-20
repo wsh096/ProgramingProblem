@@ -13,14 +13,16 @@ public class Main {
         int[] nums = new int[N];
         for(int i = 0; i < N; i++) nums[i] = Integer.parseInt(numsStr[i]);
         
-        for(int i = 0; i < N - 2; i++){
-            for(int j = i + 1; j < N - 1; j++){
-                for(int k = j + 1; k < N; k++){
-                    int sum = nums[i] + nums[j] + nums[k];
-                    if(sum <= M && sum > result) result = sum;
-                }
-            }
-        }
+        recursive(0, 0, 0, nums);
         System.out.println(result);
+    }
+    private static void recursive(int index, int sum, int cnt, int[] nums){
+    if(cnt == 3){
+         if(sum <= M && sum > result) result = sum;
+         return;
+     }
+     if(index >= N) return;
+     recursive(index + 1, sum + nums[index], cnt + 1, nums);
+     recursive(index + 1, sum, cnt, nums);
     }
 }
