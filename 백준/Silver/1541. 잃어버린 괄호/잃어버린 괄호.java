@@ -13,12 +13,8 @@ public class Main{
         String[] nums = s.split("-");
         int result = 0;
         
-        if(nums.length > 0){
-            if(s.startsWith("-"))
-                result -= sum(nums[0]);
-            else
+        if(!s.startsWith("-"))
             result += sum(nums[0]);
-        }
         
         for(int i = 1; i < nums.length; i++)
             result -= sum(nums[i]);
