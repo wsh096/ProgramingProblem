@@ -15,15 +15,10 @@ public class Main{
         br.close();
     }
     private static long power(long A, long B, long C){
-        if(B == 0) return 1;
+        if(B == 1) return A%C;
         
         long temp = power(A,B/2,C) % C;
-        long result = (temp * temp) % C;
-        
-        if(B % 2 == 1)
-            result = (result * A) % C;
-        
-        return result;
+        return (B%2==1) ? ((temp%C)*(temp%C))%C*A%C : ((temp%C)*(temp%C))%C;
     }
 }
 
