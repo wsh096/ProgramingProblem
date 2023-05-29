@@ -1,65 +1,103 @@
-import java.io.InputStreamReader;
-import java.io.IOException;
-import java.io.BufferedReader;
-import java.util.Collections;
-import java.util.List;
-import java.util.ArrayList;
-import java.util.Arrays;
-//빈배열일 때, R만 있는 경우, 빈배열을 그대로 넣어서 반환해야 한다.
-public class Main{
-    public static void main(String[] args) throws IOException{
-          BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+class Main {
+
+    private static final String ERROR = "error";
+    private static final int BIT = 5;
+    private static final int MASK = 31;
+
+    public static void main(String[] args) throws Exception {
+
+        int T = read();
+        int[] x = new int[100000];
+        int[] p = new int[(100000 >> BIT) + 1];
         StringBuilder sb = new StringBuilder();
-        
-      
-            int T = Integer.parseInt(br.readLine());
-        
-            for (int i = 0; i < T; i++) {
-                char[] operations = br.readLine().toCharArray();
-                int n = Integer.parseInt(br.readLine());
-                String arrayString = br.readLine();
-                List<String> array = new ArrayList<>(Arrays.asList(arrayString.substring(1, arrayString.length() - 1).split(",")));
-                
-                int reverseCount = 0; // R 연산 횟수
-                
-                boolean isError = false; // 에러 여부
-                
-                for (char operation : operations) {
-                    if (operation == 'R') {
-                        reverseCount++;
-                    } else if (operation == 'D') {
-                        if (array.isEmpty()||n==0) {
-                            isError = true;
-                            break;
-                        } else {
-                            if (reverseCount % 2 == 0) {
-                                array.remove(0);
-                            } else {
-                                array.remove(array.size() - 1);
-                            }
-                        }
-                        n--;
-                    }
-                }
-        
-                if (isError) {
-                    sb.append("error\n");
-                } else {
-                    if (reverseCount % 2 == 1) {
-                        Collections.reverse(array);
-                    }
-                    sb.append("[");
-                    for (int j = 0; j < array.size(); j++) {
-                        sb.append(array.get(j));
-                        if (j != array.size() - 1) {
-                            sb.append(",");
-                        }
-                    }
-                    sb.append("]\n");
-                }
+
+        while (T-- > 0) {
+
+            int c, numOperations = 0;
+
+            while ((c = System.in.read()) > 64) {
+                if (c != 68) p[numOperations >> BIT] |= 1 << (numOperations & MASK);
+                numOperations++;
             }
-        
-            System.out.println(sb);
-            br.close();
+
+            int n = read();
+
+            System.in.read(); // [
+            if (n == 0) read(); // ]
+            else for (int i = 0; i < n; i++) x[i] = read();
+
+            boolean isError = false;
+            boolean isFront = true;
+
+            int head = 0;
+            int tail = n - 1;
+
+            for (int i = 0; i < numOperations; i++) {
+
+                if (((p[i >> BIT] >> (i & MASK)) & 1) == 1) {
+                    isFront = !isFront;
+                } else {
+                    if (n-- == 0) {
+                        isError = true;
+                        break;
+                    }
+                    if (isFront)
+                        head++;
+                    else
+                        tail--;
+                }
+
+            }
+
+            if (isError) sb.append(ERROR);
+            else {
+
+                sb.append('[');
+
+                int size = tail - head + 1;
+
+                if (size > 0) {
+
+                    if (isFront) {
+                        head -= 1;
+                        c = 1;
+                    } else {
+                        head = tail + 1;
+                        c = -1;
+                    }
+
+                    while (size-- > 1) sb.append(x[head += c]).append(',');
+
+                    sb.append(x[head + c]);
+
+                }
+
+                sb.append(']');
+
+            }
+
+            sb.append('\n');
+
+            c = (numOperations >> BIT) + 1;
+            for (int i = 0; i < c; i++) p[i] = 0;
+
         }
+
+        System.out.print(sb);
+
+    }
+
+    private static int read() throws Exception {
+
+        int c, n = System.in.read() & 15;
+
+        while ((c = System.in.read()) > 44 && c < 93)
+            n = (n << 3) + (n << 1) + (c & 15);
+
+        if (c == 93) c = System.in.read();
+
+        return n;
+
+    }
+
 }
