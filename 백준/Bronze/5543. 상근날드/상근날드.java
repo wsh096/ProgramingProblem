@@ -5,18 +5,17 @@ import java.io.BufferedReader;
 public class Main{
     public static void main(String[] args) throws IOException{
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        int A = Integer.parseInt(br.readLine());
-        for(int i = 0; i < 2; i++) {
-            int tmp = Integer.parseInt(br.readLine());
-            if(tmp < A) A = tmp;
-        }
-        int B = Integer.parseInt(br.readLine());
-        for(int i = 0; i < 1; i++) {
-            int tmp = Integer.parseInt(br.readLine());
-            if(tmp < B) B = tmp;
-        }
+        int burger1 = Integer.parseInt(br.readLine());
+        int burger2 = Integer.parseInt(br.readLine());
+        int burger3 = Integer.parseInt(br.readLine());
         
-        System.out.println(A+B-50);
-        br.close();
+        int burger = Math.min(burger1, Math.min(burger2, burger3));
+
+        int cock = Integer.parseInt(br.readLine());
+        int cider = Integer.parseInt(br.readLine());
+        
+        int drink = Math.min(cock, cider);
+
+        System.out.println(burger+drink-50);
     }
 }
