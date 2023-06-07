@@ -4,17 +4,11 @@ import java.io.IOException;
 public class Main{
     public static void main(String[] args) throws IOException{
      BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-    int N = Integer.parseInt(br.readLine())/5;
+    int N = Integer.parseInt(br.readLine());
     int answer = 0;
-    for(int i = 1; i <= N; i++){
-        if(i%25==0){
-            answer+=3;
-        }else if(i%5==0){
-            answer+=2;
-        }
-        else{
-            answer++;
-        }
+    while(N >= 5){
+        answer += N/5;
+        N /= 5;
     }
     System.out.println(answer);
     br.close();
