@@ -5,11 +5,11 @@ public class Main{
 
 public static void main(String[] args) throws IOException{
     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-    int answer = 0;
+    int A = 0;
     
     int N = Integer.parseInt(br.readLine());
  
-    boolean[][] board = new boolean[100][100];
+    boolean[][] B = new boolean[100][100];
     
     for(int i = 0 ; i < N; i++){
       String[] input = br.readLine().split(" "); 
@@ -17,12 +17,11 @@ public static void main(String[] args) throws IOException{
         int Y = Integer.parseInt(input[1]);
         for(int j = X; j < X + 10; j++)
             for(int k = Y; k < Y + 10; k++){
-                if(board[j][k]) continue;
-                board[j][k] = true;
-                answer++;
+                if(B[j][k]) continue;
+                B[j][k] = true;
+                A++;
             }            
     }
-
-    System.out.println(answer);
+    System.out.println(A);
     }
 }
