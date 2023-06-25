@@ -18,7 +18,7 @@ public static void main(String[] args) throws IOException{
         for(int j = X; j < X + 10; j++)
             for(int k = Y; k < Y + 10; k++){
                 if(B[j][k]) continue;
-                B[j][k] = true;
+                B[j][k] = !B[j][k];
                 A++;
             }            
     }
