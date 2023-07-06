@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 public class Main{
     public static void main(String[] args) throws IOException{
     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    StringBuilder sb = new StringBuilder();
     String[] input = br.readLine().split(" ");
     int a = Integer.parseInt(input[0]);
     int b = Integer.parseInt(input[1]);
@@ -14,7 +15,7 @@ public class Main{
     
     int x = (c*e - b*f) /(a*e - b*d);
     int y = (a*f - c*d) / (a*e - b*d);
-
-    System.out.println(x + " " + y);
+    sb.append(x).append(" ").append(y);
+    System.out.println(sb);
     }
 }
