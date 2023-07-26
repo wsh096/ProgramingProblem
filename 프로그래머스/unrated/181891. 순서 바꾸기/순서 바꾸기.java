@@ -15,10 +15,24 @@
 // }
 
 //2. 스트림 풀이
-import java.util.stream.IntStream;
-import java.util.Arrays;
-class Solution {
-    public int[] solution(int[] num_list, int n) {         
-          return IntStream.concat(Arrays.stream(Arrays.copyOfRange(num_list,n,num_list.length)),Arrays.stream(Arrays.copyOfRange(num_list,0,n))).toArray();
+// import java.util.stream.IntStream;
+// import java.util.Arrays;
+// class Solution {
+//     public int[] solution(int[] num_list, int n) {         
+//           return IntStream.concat(Arrays.stream(Arrays.copyOfRange(num_list,n,num_list.length)),Arrays.stream(Arrays.copyOfRange(num_list,0,n))).toArray();
+//     }
+// }
+class Solution{
+    public int[] solution(int[] num_list, int n){
+        
+        int size = num_list.length;
+        // if(size == 1) return num_list;
+        int idx = 0;
+        int[] answer = new int[size];
+        while(idx < size){
+            answer[idx++] = num_list[n%size];
+        n++;
+        }
+        return answer;
     }
 }
