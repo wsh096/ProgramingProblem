@@ -26,12 +26,11 @@ class Solution{
     public int[] solution(int[] num_list, int n){
         
         int size = num_list.length;
-        // if(size == 1) return num_list;
         int idx = 0;
         int[] answer = new int[size];
+        
         while(idx < size){
-            answer[idx++] = num_list[n%size];
-        n++;
+            answer[idx++] = num_list[n++%size];
         }
         return answer;
     }
