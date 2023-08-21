@@ -4,34 +4,34 @@ import java.io.IOException;
 import java.util.StringTokenizer;
 public class Main{
     
-    private static StringTokenizer makeToken(String input) {
+    private static StringTokenizer T(String input) {
         return new StringTokenizer(input);
     }
     
-    private static int makeInt(String input){
+    private static int I(String input){
         return Integer.parseInt(input);
     }
     
     public static void main(String[] args) throws IOException{
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        StringTokenizer st = makeToken(br.readLine());
+        StringTokenizer st = T(br.readLine());
         StringBuilder sb = new StringBuilder();
-        int n = makeInt(st.nextToken());
-        int m = makeInt(st.nextToken());
+        int n = I(st.nextToken());
+        int m = I(st.nextToken());
         
         int[][] sum = new int[n + 1][n + 1];
         for(int i = 1; i <= n; i++){
-            st = makeToken(br.readLine());
+            st = T(br.readLine());
             for(int j = 1; j <= n; j++){
-                sum[i][j] = sum[i - 1][j] + sum[i][j - 1] - sum[i - 1][j - 1] + makeInt(st.nextToken());
+                sum[i][j] = sum[i - 1][j] + sum[i][j - 1] - sum[i - 1][j - 1] + I(st.nextToken());
             }
         }
         for(int i = 0; i < m; i++){
-            st = makeToken(br.readLine());
-            int x1 = makeInt(st.nextToken());
-            int y1 = makeInt(st.nextToken());
-            int x2 = makeInt(st.nextToken());
-            int y2 = makeInt(st.nextToken());
+            st = T(br.readLine());
+            int x1 = I(st.nextToken());
+            int y1 = I(st.nextToken());
+            int x2 = I(st.nextToken());
+            int y2 = I(st.nextToken());
             sb.append(sum[x2][y2] - sum[x1 - 1][y2] - sum[x2][y1 - 1] +sum[x1 - 1][y1 - 1]).append("\n");
         }
         System.out.println(sb);
