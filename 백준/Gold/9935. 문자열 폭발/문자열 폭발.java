@@ -7,7 +7,6 @@ public class Main {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         char[] str = br.readLine().toCharArray();
         String bomb = br.readLine();
-        char[] bombs = bomb.toCharArray();
         int m = bomb.length();
         StringBuilder sb = new StringBuilder();
 
