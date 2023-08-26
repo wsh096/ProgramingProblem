@@ -5,34 +5,24 @@ public class Main{
     public static void main(String[] args) throws IOException{
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int n = Integer.parseInt(br.readLine());
-        int[] distance = new int[n - 1];
-        int[] cost = new int[n - 1];
+        long[] distance = new long[n - 1];
+        long[] cost = new long[n - 1];
         
         String[] distanceInput = br.readLine().split(" ");
         String[] costInput = br.readLine().split(" ");
-        
-        int totalDistance = 0;
-        int minCost = Integer.MAX_VALUE;
-        
+
         for(int i = 0; i < n - 1; i++){
-            int a = Integer.parseInt(distanceInput[i]);
-            int b = Integer.parseInt(costInput[i]);
-            totalDistance += a;
-            distance[i] = a;
-            cost[i] = b;
-            minCost = minCost > b ? b : minCost;
+            distance[i] = Long.parseLong(distanceInput[i]);
+            cost[i] = Long.parseLong(costInput[i]);
         }
         int idx = 0;
-        int answer = 0;
+        long answer = 0;
+        long minCost = cost[0];
         while(idx < n - 1){
-            if(minCost == cost[idx]){
-                answer += totalDistance * minCost;
-                break;
-            }else{
-                answer += cost[idx] * distance[idx];
-                totalDistance -= distance[idx];
-                idx++;
+            if(minCost > cost[idx]){
+                 minCost = cost[idx];            
             }
+            answer += minCost * distance[idx++];
         }
         System.out.println(answer);
     }
