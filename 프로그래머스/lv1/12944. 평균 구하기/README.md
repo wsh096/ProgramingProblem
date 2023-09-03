@@ -1,10 +1,10 @@
 # [level 1] 평균 구하기 - 12944 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/12944?language=kotlin) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/12944?language=java) 
 
 ### 성능 요약
 
-메모리: 61.6 MB, 시간: 16.16 ms
+메모리: 74.4 MB, 시간: 0.04 ms
 
 ### 구분
 
