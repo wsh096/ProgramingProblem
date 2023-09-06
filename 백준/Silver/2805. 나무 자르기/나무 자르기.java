@@ -25,7 +25,7 @@ public class Main{
             long  mid = left + (right - left) / 2;
             long  check = 0;
             for(int i = n - 1; i >= 0; i--){
-                check += arr[i] > mid ? arr[i] - mid : 0;
+                check += arr[i] >= mid ? arr[i] - mid : 0;
                 if(check >= t) break;
             }
             if(check >= t){
