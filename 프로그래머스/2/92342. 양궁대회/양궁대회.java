@@ -4,10 +4,7 @@ class Solution {
     int max = Integer.MIN_VALUE;
     public int[] solution(int n, int[] info) {
         backTracking(0, n, info);
-        if(max == -1) {
-            answer = new int[1]; 
-            answer[0] = -1;
-        }
+        if(max == -1) return new int[] {-1};
         return answer;
     }
     private void backTracking(int depth, int n, int[] info){
