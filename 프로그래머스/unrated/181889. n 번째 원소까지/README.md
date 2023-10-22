@@ -1,10 +1,10 @@
-# [unrated] n 번째 원소까지 - 181889 
+# [level unrated] n 번째 원소까지 - 181889 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181889) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181889?language=c) 
 
 ### 성능 요약
 
-메모리: 79.5 MB, 시간: 0.03 ms
+메모리: 4.18 MB, 시간: 0.01 ms
 
 ### 구분
 
@@ -12,7 +12,11 @@
 
 ### 채점결과
 
-Empty
+정확성: 100.0<br/>합계: 100.0 / 100.0
+
+### 제출 일자
+
+2023년 10월 1일 7:24:7
 
 ### 문제 설명
 
@@ -66,4 +70,4 @@ ___</li>
 </ul>
 
 
-> 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges
+> 출처: 프로그래머스 코딩 테스트 연습, https://school.programmers.co.kr/learn/challenges
