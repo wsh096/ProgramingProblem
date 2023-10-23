@@ -1,10 +1,10 @@
 # [level unrated] 정수 부분 - 181850 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181850?language=c) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181850?language=csharp) 
 
 ### 성능 요약
 
-메모리: 4.22 MB, 시간: 0.01 ms
+메모리: 31.4 MB, 시간: 0.12 ms
 
 ### 구분
 
@@ -16,7 +16,7 @@
 
 ### 제출 일자
 
-2023년 10월 1일 19:29:27
+2023년 10월 1일 19:30:22
 
 ### 문제 설명
 
