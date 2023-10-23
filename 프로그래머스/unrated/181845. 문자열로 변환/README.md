@@ -1,10 +1,10 @@
 # [level unrated] 문자열로 변환 - 181845 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181845?language=c) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181845?language=csharp) 
 
 ### 성능 요약
 
-메모리: 4.21 MB, 시간: 0.01 ms
+메모리: 31.3 MB, 시간: 0.36 ms
 
 ### 구분
 
@@ -16,7 +16,7 @@
 
 ### 제출 일자
 
-2023년 10월 1일 19:27:7
+2023년 10월 1일 19:28:35
 
 ### 문제 설명
 
