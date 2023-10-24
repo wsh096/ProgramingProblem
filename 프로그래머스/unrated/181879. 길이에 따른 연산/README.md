@@ -1,10 +1,10 @@
-# [unrated] 길이에 따른 연산 - 181879 
+# [level unrated] 길이에 따른 연산 - 181879 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181879#qna) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181879?language=c) 
 
 ### 성능 요약
 
-메모리: 77.6 MB, 시간: 1.39 ms
+메모리: 3.67 MB, 시간: 0.01 ms
 
 ### 구분
 
@@ -12,7 +12,11 @@
 
 ### 채점결과
 
-Empty
+정확성: 100.0<br/>합계: 100.0 / 100.0
+
+### 제출 일자
+
+2023년 10월 2일 19:16:30
 
 ### 문제 설명
 
@@ -63,4 +67,4 @@ Empty
 </ul>
 
 
-> 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges
+> 출처: 프로그래머스 코딩 테스트 연습, https://school.programmers.co.kr/learn/challenges
