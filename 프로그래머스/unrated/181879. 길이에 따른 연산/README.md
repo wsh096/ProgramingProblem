@@ -1,10 +1,10 @@
 # [level unrated] 길이에 따른 연산 - 181879 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181879?language=c) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181879?language=csharp) 
 
 ### 성능 요약
 
-메모리: 3.67 MB, 시간: 0.01 ms
+메모리: 31.5 MB, 시간: 0.87 ms
 
 ### 구분
 
@@ -16,7 +16,7 @@
 
 ### 제출 일자
 
-2023년 10월 2일 19:16:30
+2023년 10월 2일 19:19:39
 
 ### 문제 설명
 
