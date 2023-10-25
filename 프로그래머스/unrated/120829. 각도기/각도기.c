@@ -1,0 +1,7 @@
+#include <stdio.h>
+#include <stdbool.h>
+#include <stdlib.h>
+
+int solution(int angle) {
+    return angle == 180 ? 4 : angle > 90 ? 3 : angle == 90 ? 2 : angle < 90 ? 1 : 0;
+}
