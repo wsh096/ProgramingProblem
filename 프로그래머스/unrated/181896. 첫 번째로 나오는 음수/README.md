@@ -1,10 +1,10 @@
-# [unrated] 첫 번째로 나오는 음수 - 181896 
+# [level unrated] 첫 번째로 나오는 음수 - 181896 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181896) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181896?language=c) 
 
 ### 성능 요약
 
-메모리: 87 MB, 시간: 2.22 ms
+메모리: 4.2 MB, 시간: 0.01 ms
 
 ### 구분
 
@@ -12,7 +12,11 @@
 
 ### 채점결과
 
-Empty
+정확성: 100.0<br/>합계: 100.0 / 100.0
+
+### 제출 일자
+
+2023년 10월 4일 19:14:37
 
 ### 문제 설명
 
@@ -63,4 +67,4 @@ Empty
 </ul>
 
 
-> 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges
+> 출처: 프로그래머스 코딩 테스트 연습, https://school.programmers.co.kr/learn/challenges
