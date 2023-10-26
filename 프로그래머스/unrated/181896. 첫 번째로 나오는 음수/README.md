@@ -1,10 +1,10 @@
 # [level unrated] 첫 번째로 나오는 음수 - 181896 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181896?language=c) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181896?language=csharp) 
 
 ### 성능 요약
 
-메모리: 4.2 MB, 시간: 0.01 ms
+메모리: 31.4 MB, 시간: 0.35 ms
 
 ### 구분
 
@@ -16,7 +16,7 @@
 
 ### 제출 일자
 
-2023년 10월 4일 19:14:37
+2023년 10월 4일 19:18:31
 
 ### 문제 설명
 
