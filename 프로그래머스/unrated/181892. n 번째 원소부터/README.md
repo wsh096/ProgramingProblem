@@ -1,10 +1,10 @@
 # [level unrated] n 번째 원소부터 - 181892 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181892?language=csharp) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181892?language=c) 
 
 ### 성능 요약
 
-메모리: 31.3 MB, 시간: 0.17 ms
+메모리: 4.44 MB, 시간: 0.01 ms
 
 ### 구분
 
@@ -16,7 +16,7 @@
 
 ### 제출 일자
 
-2023년 10월 1일 7:33:34
+2023년 10월 4일 22:47:45
 
 ### 문제 설명
 
