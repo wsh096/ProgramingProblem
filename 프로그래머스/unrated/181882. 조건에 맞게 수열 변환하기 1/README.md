@@ -1,10 +1,10 @@
-# [unrated] 조건에 맞게 수열 변환하기 1 - 181882 
+# [level unrated] 조건에 맞게 수열 변환하기 1 - 181882 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181882) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181882?language=c) 
 
 ### 성능 요약
 
-메모리: 110 MB, 시간: 6.37 ms
+메모리: 27.9 MB, 시간: 30.19 ms
 
 ### 구분
 
@@ -12,7 +12,11 @@
 
 ### 채점결과
 
-Empty
+정확성: 100.0<br/>합계: 100.0 / 100.0
+
+### 제출 일자
+
+2023년 10월 1일 19:22:9
 
 ### 문제 설명
 
@@ -58,4 +62,4 @@ Empty
 </ul>
 
 
-> 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges
+> 출처: 프로그래머스 코딩 테스트 연습, https://school.programmers.co.kr/learn/challenges
