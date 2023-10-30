@@ -1,10 +1,10 @@
 # [level unrated] 조건에 맞게 수열 변환하기 1 - 181882 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181882?language=c) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181882?language=csharp) 
 
 ### 성능 요약
 
-메모리: 27.9 MB, 시간: 30.19 ms
+메모리: 38.3 MB, 시간: 2.23 ms
 
 ### 구분
 
@@ -16,7 +16,7 @@
 
 ### 제출 일자
 
-2023년 10월 1일 19:22:9
+2023년 10월 1일 19:25:34
 
 ### 문제 설명
 
