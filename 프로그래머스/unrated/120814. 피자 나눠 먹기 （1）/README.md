@@ -1,10 +1,10 @@
 # [level unrated] 피자 나눠 먹기 (1) - 120814 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/120814?language=c) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/120814?language=csharp) 
 
 ### 성능 요약
 
-메모리: 4.18 MB, 시간: 0.01 ms
+메모리: 31.1 MB, 시간: 0.16 ms
 
 ### 구분
 
@@ -16,7 +16,7 @@
 
 ### 제출 일자
 
-2023년 10월 2일 7:20:42
+2023년 10월 2일 7:21:46
 
 ### 문제 설명
 
