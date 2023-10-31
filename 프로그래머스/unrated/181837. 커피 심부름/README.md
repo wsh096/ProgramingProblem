@@ -1,10 +1,10 @@
-# [unrated] 커피 심부름 - 181837 
+# [level unrated] 커피 심부름 - 181837 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181837) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181837?language=c) 
 
 ### 성능 요약
 
-메모리: 70.8 MB, 시간: 1.02 ms
+메모리: 4.43 MB, 시간: 0.01 ms
 
 ### 구분
 
@@ -12,7 +12,11 @@
 
 ### 채점결과
 
-Empty
+정확성: 100.0<br/>합계: 100.0 / 100.0
+
+### 제출 일자
+
+2023년 11월 3일 7:23:31
 
 ### 문제 설명
 
@@ -129,4 +133,4 @@ Empty
 </ul>
 
 
-> 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges
+> 출처: 프로그래머스 코딩 테스트 연습, https://school.programmers.co.kr/learn/challenges
