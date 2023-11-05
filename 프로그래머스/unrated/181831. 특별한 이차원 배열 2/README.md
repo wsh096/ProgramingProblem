@@ -1,10 +1,10 @@
 # [level unrated] 특별한 이차원 배열 2 - 181831 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181831?language=c) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181831?language=csharp) 
 
 ### 성능 요약
 
-메모리: 4.22 MB, 시간: 0.01 ms
+메모리: 30.9 MB, 시간: 0.25 ms
 
 ### 구분
 
@@ -16,7 +16,7 @@
 
 ### 제출 일자
 
-2023년 11월 1일 7:27:16
+2023년 11월 1일 7:29:44
 
 ### 문제 설명
 
