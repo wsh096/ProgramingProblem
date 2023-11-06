@@ -1,10 +1,10 @@
 # [level unrated] 정사각형으로 만들기 - 181830 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181830?language=c) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181830?language=csharp) 
 
 ### 성능 요약
 
-메모리: 6.24 MB, 시간: 2.18 ms
+메모리: 31.8 MB, 시간: 0.65 ms
 
 ### 구분
 
@@ -16,7 +16,7 @@
 
 ### 제출 일자
 
-2023년 11월 2일 7:26:37
+2023년 11월 2일 7:30:0
 
 ### 문제 설명
 
