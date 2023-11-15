@@ -1,10 +1,10 @@
 # [level unrated] A 강조하기 - 181874 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181874?language=c) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181874?language=csharp) 
 
 ### 성능 요약
 
-메모리: 4.34 MB, 시간: 0.01 ms
+메모리: 31.3 MB, 시간: 0.49 ms
 
 ### 구분
 
@@ -16,7 +16,7 @@
 
 ### 제출 일자
 
-2023년 11월 4일 7:11:35
+2023년 11월 4일 7:12:42
 
 ### 문제 설명
 
