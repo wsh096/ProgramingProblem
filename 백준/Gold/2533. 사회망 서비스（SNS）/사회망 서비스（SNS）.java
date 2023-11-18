@@ -1,50 +1,61 @@
 import java.io.BufferedReader;
-import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.StringTokenizer;
 
 public class Main {
-    static int n;
-    static boolean[] visited;
-    static List<Integer>[] graph;
-    static int[][] dp;
+    static long answer;
+    public static class Node{
+        int no;
+        Node linkNode;
 
-    public static void main(String args[]) throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        n = Integer.valueOf(br.readLine());
-        dp = new int[n + 1][2];
-        visited = new boolean[n + 1];
-        graph = new ArrayList[n + 1];
-        for (int i = 1; i <= n; i++) {
-            graph[i] = new ArrayList<>();
+        public Node(int no, Node linkNode) {
+            this.no = no;
+            this.linkNode = linkNode;
         }
-
-        StringTokenizer st;
-        for (int i = 1; i < n; i++) {
-            st = new StringTokenizer(br.readLine());
-            int start = Integer.valueOf(st.nextToken());
-            int end = Integer.valueOf(st.nextToken());
-            graph[start].add(end);
-            graph[end].add(start);
-        }
-
-        dfs(1);
-        System.out.println(Math.min(dp[1][0], dp[1][1]));
     }
 
-    private static void dfs(int number) {
-        visited[number] = true;
-        dp[number][0] = 0;
-        dp[number][1] = 1;
+    public static void main(String[] args) throws Exception{
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringTokenizer st;
+        int N = Integer.parseInt(br.readLine());
+        Node[] nodes = new Node[N+1];
+        boolean[] visits = new boolean[N+1];
 
-        for (int child : graph[number]) {
-            if (!visited[child]) {
-                dfs(child);
-                dp[number][0] += dp[child][1];
-                dp[number][1] += Math.min(dp[child][0], dp[child][1]);
+        for(int i=0; i<N-1; i++){
+            st = new StringTokenizer(br.readLine());
+            int a = Integer.parseInt(st.nextToken());
+            int b = Integer.parseInt(st.nextToken());
+            nodes[a] = new Node(b, nodes[a]);
+            nodes[b] = new Node(a, nodes[b]);
+        }
+
+
+        dfs(1, nodes, visits);
+
+        System.out.println(answer);
+    }
+
+    public static boolean dfs(int idx, Node[] nodes, boolean[] visits){
+        visits[idx] = true;
+        boolean earlyCheck = false;
+        boolean leafCheck = true;
+
+        for (Node linkNode = nodes[idx]; linkNode != null ; linkNode = linkNode.linkNode) {
+            if (visits[linkNode.no]) {
+                continue;
+            }
+
+            leafCheck = false;
+
+            if (!dfs(linkNode.no, nodes, visits)) {
+                earlyCheck = true;
             }
         }
+
+        if(earlyCheck){
+            answer++;
+        }
+
+        return earlyCheck;
     }
 }
