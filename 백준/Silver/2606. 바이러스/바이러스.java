@@ -1,37 +1,38 @@
 import java.util.*;
+import java.io.*;
+
 public class Main{
-    public static void main(String[] args){
-        Scanner sc = new Scanner(System.in);
-        int N = sc.nextInt();//컴퓨터 수
-        int edge = sc.nextInt();//연결 수.
-        List<Integer>[] graph = new List[N+1];
-        boolean[] visited = new boolean[N+1];//방문 확인 boolean 배열
-        
-        for(int i = 1; i <= N; i++){
-            graph[i] = new ArrayList<>();
+    public static void main(String[] args) throws IOException{
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        int N = Integer.parseInt(reader.readLine());
+        int M = Integer.parseInt(reader.readLine());
+        List<List<Integer>> graph = new ArrayList<>();
+        for(int i = 0; i <= N;i++) {
+            graph.add(new ArrayList<>());
+        }    
+
+        for(int i = 0; i < M; i++){
+            String[] input = reader.readLine().split(" ");
+            int x = Integer.parseInt(input[0]);
+            int y = Integer.parseInt(input[1]);
+            graph.get(x).add(y);
+            graph.get(y).add(x);
         }
-        for(int i = 0; i < edge; i++){ //양방향 그래프 생성.
-            int x = sc.nextInt();
-            int y = sc.nextInt();
-            graph[x].add(y);
-            graph[y].add(x);
-        }
-        
-        
+        boolean visited[] = new boolean[N + 1];
+        Queue<Integer> q = new LinkedList<>();
+        q.add(1);
+        visited[1] = true;
         int answer = 0;
-        Queue<Integer> queue = new LinkedList<>();
-        queue.offer(1);
-        visited[1] = true; //초기화
-        while(!queue.isEmpty()){
-            int cur = queue.poll();
-            for(int next : graph[cur]){
-                if(!visited[next]){
-                    visited[next] = true;
-                    queue.offer(next);
+        while(!q.isEmpty()) {
+            int cur = q.poll();
+            for(int neighbor : graph.get(cur)){
+                if(!visited[neighbor]){
+                    visited[neighbor] = true;
+                    q.add(neighbor);
                     answer++;
-                }
             }
         }
+    }
         System.out.println(answer);
     }
 }
