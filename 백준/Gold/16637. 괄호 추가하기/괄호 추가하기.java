@@ -8,7 +8,7 @@ public class Main{
         N = sc.nextInt();
         sc.nextLine();
         input = sc.nextLine().toCharArray();
-        result = Integer.MIN_VALUE;
+        result = -100001;
         solve(2, (long)(input[0] - '0'));
 
             System.out.println(result);
