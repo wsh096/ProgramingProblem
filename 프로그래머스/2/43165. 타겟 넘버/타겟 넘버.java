@@ -1,12 +1,15 @@
 class Solution {
     int answer = 0;
+    int[] n;
+    int t;
     public int solution(int[] numbers, int target) {
-        
-        op(0, numbers, target, 0);
+        n = numbers;
+        t = target;
+        op(0, 0);
 
         return answer;
     }
-    private void op(int i,int[] n, int t, int value){
+    private void op(int i, int value){
         
         if(i == n.length){
             if(value == t){
@@ -14,7 +17,7 @@ class Solution {
             }
             return;
         }
-        op(i + 1, n, t, value + n[i]);
-        op(i + 1, n, t, value - n[i]);        
+        op(i + 1, value + n[i]);
+        op(i + 1, value - n[i]);        
     }
 }
