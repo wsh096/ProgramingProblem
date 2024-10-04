@@ -4,15 +4,8 @@
 using namespace std;
 
 int solution(string my_string, string is_suffix) {
-    int i = my_string.size() - 1;
-    int j = is_suffix.size() - 1;
-    while(j >= 0){
-        if(my_string[i] == is_suffix[j]){
-            i--;
-            j--;
-        }else{
-            return 0;
-        }
-    }
-            return 1;
+    if(is_suffix.size() > my_string.size()){
+        return 0;
+    } 
+   return my_string.substr(my_string.size() - is_suffix.size()) == is_suffix;
 }
