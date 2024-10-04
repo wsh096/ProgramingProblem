@@ -4,14 +4,10 @@
 using namespace std;
 
 vector<int> solution(vector<int> arr, int k) {
-    if(k % 2 == 1){
+
         for(int i = 0; i < arr.size(); i++){
-            arr[i] *= k;
+           k % 2 == 1 ?  arr[i] *= k : arr[i] += k;
         }
-    }else{
-        for(int i = 0; i < arr.size(); i++){
-            arr[i] += k;
-        }
-    }
+  
     return arr;
 }
