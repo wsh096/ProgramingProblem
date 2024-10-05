@@ -5,12 +5,9 @@ using namespace std;
 
 string solution(string my_string, int m, int c) {
     string answer = "";
-    vector<string> strArr;
-    for(int i = 0; i < my_string.size(); i += m){
-        strArr.push_back(my_string.substr(i, m));
+    for(int i = c - 1; i < my_string.size(); i += m){
+        answer += my_string[i];
     }
-    for(string str : strArr){
-        answer += str[c-1];
-    }
+  
     return answer;
 }
