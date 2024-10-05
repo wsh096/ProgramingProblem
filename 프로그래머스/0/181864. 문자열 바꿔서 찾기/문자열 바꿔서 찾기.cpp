@@ -8,5 +8,5 @@ int solution(string myString, string pat) {
     for(char c : pat){
         pat_target += (c == 'A' ?  'B' : 'A');
     }
-    return myString.find(pat_target) == string::npos ? 0 : 1;
+    return myString.find(pat_target) != string::npos;
 }
