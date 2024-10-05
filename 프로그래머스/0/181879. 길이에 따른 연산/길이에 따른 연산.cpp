@@ -1,18 +1,10 @@
 #include <string>
 #include <vector>
 #include <numeric>
+#define a(x)  accumulate((x).begin(), (x).end(), 0)
+#define b(x)  accumulate((x).begin(), (x).end(), 1, multiplies<int>())
 using namespace std;
 
 int solution(vector<int> num_list) {
-    int n = num_list.size();
-    int answer = 0;
-    if(n <= 10) {
-        answer = 1;
-        for(int i = 0; i < n; i++){
-            answer *= num_list[i];
-        }
-    }else{
-       answer = accumulate(num_list.begin(), num_list.end(), answer);
-    }
-    return answer;
+    return num_list.size() > 10 ? a(num_list) : b(num_list);
 }
