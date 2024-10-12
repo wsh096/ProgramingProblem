@@ -5,9 +5,9 @@ int solution(int n)
 {
     int answer = 0;
 
-while(n > 0){
-    answer += n % 10;
-    n /= 10;
-}
+string temp = to_string(n);
+    for(char c : temp){
+        answer += c - '0';
+    }
     return answer;
 }
