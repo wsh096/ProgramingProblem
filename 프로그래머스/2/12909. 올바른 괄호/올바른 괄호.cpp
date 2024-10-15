@@ -1,16 +1,14 @@
 #include<string>
-#include <stack>
 
 using namespace std;
 
 bool solution(string s)
 {
-    stack<char> _s;
-    _s.push(s[0]);
-    for(int i = 1; i < s.size(); i++){
-     if(!_s.empty() && _s.top() == '(' && s[i] == ')') _s.pop();
-     else _s.push(s[i]);
+    int n = 0;
+
+    for(int i = 0; i < s.size(); i++){
+     if(n < 0) return false;
+     s[i] == '(' ? n++ : n--;
     }
-    if(!_s.empty()) return false;
-    return true;
+    return n == 0;
 }
