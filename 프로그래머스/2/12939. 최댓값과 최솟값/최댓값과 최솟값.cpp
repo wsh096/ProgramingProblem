@@ -1,19 +1,17 @@
 #include <string>
+#include <vector>
+#include <numeric>
 #include <sstream>
-#include <limits>
 using namespace std;
 
 string solution(string s) {
-
-    int _min = numeric_limits<int>::max();
-    int _max = numeric_limits<int>::min();
-    
-    stringstream ss(s);
+    stringstream ss; ss.str(s);
     int temp;
-    while(ss >> temp){
-        _min = min(temp, _min);
-        _max = max(temp, _max);
+    int i = numeric_limits<int>::max();
+    int j = numeric_limits<int>::min();
+    while(ss>>temp){
+        i = min(temp, i);
+        j = max(temp, j);
     }
-    
-    return to_string(_min) + " " + to_string(_max);
+    return to_string(i) + " " + to_string(j);
 }
