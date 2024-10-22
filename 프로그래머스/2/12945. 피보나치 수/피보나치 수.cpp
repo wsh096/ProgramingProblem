@@ -3,10 +3,18 @@
 
 using namespace std;
 int dp[100001];
-int solution(int n) {
-    dp[1] = 1;
-    for(int i = 2; i <= n; i++){
-        dp[i] = (dp[i - 2] + dp[i - 1])%1234567;
+int fibonachi(int n){
+    if(n <= 1){
+        return n;
+    }
+    if(dp[n] != 0){
+        return dp[n];
+    }else{
+        dp[n] = (fibonachi(n - 2) + fibonachi(n - 1))%1234567;
     }
     return dp[n];
+}
+int solution(int n) {
+    
+    return fibonachi(n);
 }
